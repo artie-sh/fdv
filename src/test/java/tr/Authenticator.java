@@ -18,4 +18,9 @@ public class Authenticator {
 
     static String username = "dfrdemo3.2@wsi.com";
     static String pass = "wsi";
+
+    static void authenticate() {
+
+
+    }
 }
