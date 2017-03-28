@@ -1,7 +1,6 @@
 package webservices;
 
-import bn.Environment;
-import tr.Authenticator;
+import configs.Environment;
 
 import static io.restassured.RestAssured.given;
 
@@ -10,7 +9,7 @@ import static io.restassured.RestAssured.given;
  */
 public class AuthenticationWS {
 
-    public String baseURL = "";
+    static String baseURL = "/Optima/services/AuthenticationWebService/Authentication.asmx";
     static String xmlBody =  "<soap:Envelope xmlns:soap=\"http://www.w3.org/2003/05/soap-envelope\" xmlns:dss=\"http://www.wsicorp.com/DSS/\">\n"+
             "   <soap:Header/>\n"+
             "   <soap:Body>\n"+
@@ -20,7 +19,6 @@ public class AuthenticationWS {
             "</soap:Envelope>";
 
     public void authenticate(Environment environment) {
-        given().contentType("application/soap+xml;").body(String.format(AuthenticationWS.xmlBody, environment.userName, environment.pass)).post(this.baseURL).then().log().all();
-
+        given().contentType("application/soap+xml;").body(String.format(AuthenticationWS.xmlBody, environment.userName, environment.pass)).post(environment.address + this.baseURL).then().log().all();
     }
 }
