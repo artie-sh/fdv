@@ -57,5 +57,6 @@
     <orderEntry type="library" scope="TEST" name="Maven: org.springframework:spring-web:4.2.6.RELEASE" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: io.rest-assured:scala-support:3.0.2" level="project" />
     <orderEntry type="library" scope="TEST" name="Maven: org.scala-lang:scala-library:2.11.7" level="project" />
+    <orderEntry type="library" name="Maven: junit:junit:4.12" level="project" />
   </component>
 </module>
